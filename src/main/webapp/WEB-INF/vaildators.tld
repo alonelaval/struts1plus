@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee web-jsptaglibrary_2_1.xsd">
+ <tlib-version>1.0</tlib-version>
+ <short-name>vaildate</short-name>
+ <uri>http://www.alonelaval.com/vaildators</uri>
+ <description>alonelaval@gmail.com</description>
+ <tag>	
+		<name>validators</name>
+		<tagclass>com.alonelaval.struts1plus.tag.ValidatorsTag</tagclass>
+		<bodycontent>scriptless</bodycontent>
+		<description>
+			验证器
+		</description>
+ </tag>
+ <tag>
+		<name>validator</name>
+		<tag-class>com.alonelaval.struts1plus.tag.ValidatorTag</tag-class>
+		<body-content>empty</body-content>
+		<description>Renders an HTML 'input' tag with type 'text' using the bound value.</description>
+		<attribute>
+			<name>value</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>HTML Standard Attribute</description>
+		</attribute>
+		<attribute>
+			<name>validateClassName</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description>HTML Standard Attribute</description>
+		</attribute>
+		<attribute>
+			<name>errorPath</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>HTML Standard Attribute</description>
+		</attribute>
+		<attribute>
+			<name>redirect</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description>HTML Standard Attribute</description>
+		</attribute>
+		<attribute>
+			<name>errorInfo</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description>HTML Standard Attribute</description>
+		</attribute>
+ </tag>
+ <tag>
+		<name>token</name>
+		<tag-class>com.alonelaval.struts1plus.tag.GenerateTokenTag</tag-class>
+		<body-content>empty</body-content>
+		<description>Renders an HTML 'input' tag with type 'text' using the bound value.</description>
+		<attribute>
+			<name>tokenName</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description>标志名称</description>
+		</attribute>
+		<attribute>
+			<name>isValue</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description>是否直接打印标志</description>
+		</attribute>
+ </tag>
+</taglib>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+  <form-beans/>
+  <global-exceptions />
+  <global-forwards >
+  		<forward name="error" path="/error.jsp"></forward>
+  		<forward name="index" path="/index.jsp"></forward>
+  		<forward name="myerror" path="/MyErrorJsp.jsp"></forward>
+  </global-forwards>
+  <action-mappings>
+    <action path="/users" type="com.alonelaval.struts1plus.examples.action.TestUserAciton" validate="false">    
+	    <forward name="index" path="/list.jsp"></forward>
+    </action>
+     <action path="/user!update" type="com.alonelaval.struts1plus.examples.action.TestUserAciton">    
+	    <forward name="index" path="/list.jsp"></forward>
+    </action>
+     <action path="/user!delete" type="com.alonelaval.struts1plus.examples.action.TestUserAciton" validate="false">   
+	    <forward name="index" path="/list.jsp"></forward>
+    </action>
+     <action path="/user!add" type="com.alonelaval.struts1plus.examples.action.TestUserAciton">    
+	    <forward name="index" path="/list.jsp"></forward>
+	    <forward name="error" path="/input.jsp"></forward>
+    </action>
+    <action path="/user!toAdd" type="com.alonelaval.struts1plus.examples.action.TestUserAciton" validate="false">    
+	    <forward name="input" path="/input.jsp"></forward>
+    </action>
+    <action path="/user!toUpdate" type="com.alonelaval.struts1plus.examples.action.TestUserAciton" validate="false"> 
+	    <forward name="input" path="/input.jsp"></forward>
+	    <forward name="error" path="/input.jsp"></forward>
+    </action>
+    <action path="/upload" type="com.alonelaval.struts1plus.examples.action.UploadFileAction"> 
+	    <forward name="upload" path="/upload.jsp"></forward>
+	    <forward name="error" path="/upload.jsp"></forward>
+    </action>
+    <action path="/ajax" type="com.alonelaval.struts1plus.examples.action.AjaxUploadFileAction"> 
+	    <forward name="upload" path="/ajaxUpload.jsp"></forward>
+	    <forward name="error" path="/ajaxUpload.jsp"></forward>
+    </action>
+    <action path="/json" type="com.alonelaval.struts1plus.examples.action.AjaxJsonAction"> 
+	    <forward name="upload" path="/json.jsp"></forward>
+	    <forward name="error" path="/json.jsp"></forward>
+    </action>
+    <action path="/index!toList" type="com.alonelaval.struts1plus.examples.action.IndexAction"> 
+	    <forward name="list" path="/users.do" redirect="true"></forward>
+    </action>
+    <action path="/index!toAjaxUpload" type="com.alonelaval.struts1plus.examples.action.IndexAction"> 
+	    <forward name="ajaxUpload" path="/ajaxUpload.jsp"></forward>
+    </action>
+    <action path="/index!toAjaxJson" type="com.alonelaval.struts1plus.examples.action.IndexAction"> 
+	    <forward name="ajaxJson" path="/json.jsp"></forward>
+    </action>
+     <action path="/index!toAjaxTest" type="com.alonelaval.struts1plus.examples.action.AjaxJsonAction"> 
+	    <forward name="index" path="/json.jsp"></forward>
+    </action>
+    <action path="/index!toDownload" type="com.alonelaval.struts1plus.examples.action.IndexAction"> 
+	    <forward name="download" path="/download.jsp"></forward>
+    </action>
+    <action path="/index!toUpload" type="com.alonelaval.struts1plus.examples.action.IndexAction"> 
+	    <forward name="upload" path="/upload.jsp"></forward>
+    </action>
+     <action path="/index!toIndex" type="com.alonelaval.struts1plus.examples.action.IndexAction"> 
+	    <forward name="index" path="/index.jsp"></forward>
+    </action>
+     <action path="/download" type="com.alonelaval.struts1plus.examples.action.DownloadAction"> 
+	    <forward name="download" path="/download.jsp"></forward>
+    </action>
+     <action path="/index!toToken" type="com.alonelaval.struts1plus.examples.action.IndexAction"> 
+	    <forward name="token" path="/token.jsp"></forward>
+    </action>
+     <action path="/token" type="com.alonelaval.struts1plus.examples.action.TokenStrutsAction"> 
+	    <forward name="token" path="/index.jsp"></forward>
+	    <forward name="error" path="/token.jsp"></forward>
+    </action>
+     <action path="/index!toMultiChoice" type="com.alonelaval.struts1plus.examples.action.IndexAction"> 
+	    <forward name="multiChoice" path="/multiChoice.jsp"></forward>
+    </action>
+    <action path="/multiChoice" type="com.alonelaval.struts1plus.examples.action.MultiChoiceAction"> 
+	    <forward name="multiChoice" path="/multiChoice.jsp"></forward>
+    </action>
+    <action path="/index!toPage" type="com.alonelaval.struts1plus.examples.action.IndexAction"> 
+	    <forward name="page" path="/page.jsp"></forward>
+    </action>
+    <action path="/page" type="com.alonelaval.struts1plus.examples.action.PageAction"> 
+	    <forward name="page" path="/page.jsp"></forward>
+    </action>
+    <action path="/index!toRestful" type="com.alonelaval.struts1plus.examples.action.IndexAction"> 
+	    <forward name="restful" path="/restful.jsp"></forward>
+    </action>
+    <action path="/index!toUrlOverrideURL" type="com.alonelaval.struts1plus.examples.action.IndexAction"> 
+	    <forward name="redirect" path="/examples/"></forward>
+    </action>
+    <action path="/index!toRedirectURL" type="com.alonelaval.struts1plus.examples.action.IndexAction"> 
+	    <forward name="redirect" path="/examples/" redirect="true"></forward>
+    </action>
+    <action path="/index!toRedirect" type="com.alonelaval.struts1plus.examples.action.IndexAction" > 
+	    <forward name="redirect" path="/redirect.jsp" redirect="true"></forward>
+    </action>
+     <action path="/test1" type="com.alonelaval.struts1plus.examples.test.action.Test1Aciton" > 
+	    <forward name="test2" path="/test2.do"></forward>
+    </action>
+    <action path="/test2" type="com.alonelaval.struts1plus.examples.test.action.Test2Action" > 
+	    <forward name="redirect" path="/redirect.jsp" redirect="true"></forward>
+    </action>
+  </action-mappings>
+  <message-resources parameter="struts.ApplicationResources" />
+</struts-config>
+

@@ -1,0 +1,24 @@
+ <action path="/test" type="strutsaction.TestStrutsAction">    <!-- 这里的name值要和上面的form-bean的name值一样才可以，否则会出现NullPointerException -->
+	    <forward name="detaildata" path="/detail-report.jsp"></forward>
+	    <forward name="nodata"  path="/not-found.jsp" ></forward>
+    </action>
+     <action path="/test!addUser" type="strutsaction.TestStrutsAction" >    <!-- 这里的name值要和上面的form-bean的name值一样才可以，否则会出现NullPointerException -->
+	    <forward name="index" path="/MyTestJsp.jsp"></forward>
+	    <forward name="nodata" path="/not-found.jsp" redirect="true"></forward>
+    </action>
+    <action path="/testAjax" type="strutsaction.TestAjaxStrutsAction" >    <!-- 这里的name值要和上面的form-bean的name值一样才可以，否则会出现NullPointerException -->
+	    <forward name="index" path="/MyTestJsp.jsp"></forward>
+	    <forward name="nodata" path="/not-found.jsp" redirect="true"></forward>
+    </action>
+     <action path="/testAjax!getJson" type="strutsaction.TestAjaxStrutsAction" >    <!-- 这里的name值要和上面的form-bean的name值一样才可以，否则会出现NullPointerException -->
+	    <forward name="index" path="/MyTestJsp.jsp"></forward>
+	    <forward name="nodata" path="/not-found.jsp" redirect="true"></forward>
+    </action>
+    <action path="/upload" type="strutsaction.TestFileStrutsAction" >    <!-- 这里的name值要和上面的form-bean的name值一样才可以，否则会出现NullPointerException -->
+	    <forward name="index" path="/MyTestJsp.jsp"></forward>
+	    <forward name="nodata" path="/not-found.jsp" redirect="true"></forward>
+    </action>
+    <action path="/upload!getFile" type="strutsaction.TestFileStrutsAction" >    <!-- 这里的name值要和上面的form-bean的name值一样才可以，否则会出现NullPointerException -->
+	    <forward name="index" path="/MyTestJsp.jsp"></forward>
+	    <forward name="nodata" path="/not-found.jsp" redirect="true"></forward>
+    </action>
